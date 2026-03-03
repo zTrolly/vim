@@ -109,7 +109,14 @@ return {
           {
             pane = 2,
             section = "terminal",
-            cmd = "cowsay -f dragon 'Welcome to Neovim!'",
+            -- compile a file called donut.c and run it in the terminal pane  the path is nvim/lua/plugins/random/donut.c
+            cmd = "gcc "
+              .. vim.fn.stdpath("config")
+              .. "/lua/plugins/random/donut.c -o "
+              .. vim.fn.stdpath("config")
+              .. "/lua/plugins/random/donut && "
+              .. vim.fn.stdpath("config")
+              .. "/lua/plugins/random/donut",
             height = 30,
             padding = 1,
           },
