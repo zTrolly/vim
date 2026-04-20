@@ -49,6 +49,10 @@ return {
           -- Search & Visual
           vim.api.nvim_set_hl(0, "Search", { bg = "#ff79c660", fg = "#000000" })
           vim.api.nvim_set_hl(0, "Visual", { bg = "#bd93f960" })
+
+          -- Copilot ghost text (bright enough to be visible on dark/transparent bg)
+          vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#6272a4", italic = true })
+          vim.api.nvim_set_hl(0, "CopilotAnnotation", { fg = "#6272a4", italic = true })
         end,
       })
     end,

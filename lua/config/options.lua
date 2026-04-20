@@ -4,6 +4,8 @@
 
 local opt = vim.opt
 
+vim.g.ai_cmp = false
+
 opt.linespace = 2
 
 -- Line length limit
